@@ -35,20 +35,20 @@ public class WeatherStationStore {
 		
 		return new ArrayList<WeatherStation>(weatherStations.values());
 		
-	}
-	
-	public ArrayList<WeatherStation> getAll() {
-		return this.weatherStations;
-	}
-	public WeatherStation getByName(String wantedName) throws Exception{
-		for (WeatherStation station : this.weatherStations){
-		        if (wantedName.equals(station.siteName)){
-		            return station;
-		        }
+		}
 		
-		
-	}
-		throw new Exception("FUCK YOU BISH");
+		public ArrayList<WeatherStation> getAll() {
+			return this.weatherStations;
+		}
+		public WeatherStation getByName(String wantedName) throws Exception{
+			for (WeatherStation station : this.weatherStations){
+			        if (wantedName.equals(station.siteName)){
+			            return station;
+			        }
+			
+			
+		}
+		throw new Exception("Not found");
 
-}
+	}
 }
